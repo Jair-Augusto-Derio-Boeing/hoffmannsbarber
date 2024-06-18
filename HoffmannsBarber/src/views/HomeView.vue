@@ -21,12 +21,11 @@ export default {
 
 <style >
   .back {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 400vh;
     display: flex;
     justify-content: center;
     align-items: center;
