@@ -1,9 +1,6 @@
 <template>
-    <div class="backdrop">
-
-        <div class="background-navbar"></div>
-
-    </div>
+    <nav>
+    </nav>
 </template>
 
 <script>
@@ -14,25 +11,18 @@ export default {
 </script>
 
 <style>
-* {
-    padding: 0;
-    margin: 0;
-}
-
-.backdrop {
-    height: 100vh;
-    width: 100%;
+nav {
+    background-color: black;
     display: flex;
+    width: 100%;
+    height: 80px;
+    align-self: flex-end;
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 31px;
 }
 
-.background-navbar {
-    background-color: #D9D9D9;
-    width: 100px;
-    height: 50px;
-    justify-content: end;
-    justify-items:  end;
-    align-items: end;
-    align-content: end;
-}
+
 
 </style>

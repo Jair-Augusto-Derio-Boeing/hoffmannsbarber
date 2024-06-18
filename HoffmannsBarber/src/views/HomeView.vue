@@ -1,6 +1,8 @@
 <template>
-  
-  <Navbar class="navbar"></Navbar>
+  <div class="back">
+    <Navbar></Navbar>
+
+  </div>
 </template>
 
 <script>
@@ -18,5 +20,15 @@ export default {
 </script>
 
 <style >
-  
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
