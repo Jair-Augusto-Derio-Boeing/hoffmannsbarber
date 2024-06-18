@@ -1,5 +1,6 @@
 <template>
     <nav>
+        <img class="logo" src="../assets/logo-blank.svg" alt="">
     </nav>
 </template>
 
@@ -19,6 +20,11 @@ nav {
     top: 0px;
 }
 
+.logo {
+    width: 8%;
+    top: 8%;
+    left: 1%;
+    position: relative;
 
-
+}
 </style>
