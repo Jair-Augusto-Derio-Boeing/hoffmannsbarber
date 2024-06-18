@@ -27,7 +27,5 @@ export default {
     width: 100%;
     height: 400vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
 </style>
