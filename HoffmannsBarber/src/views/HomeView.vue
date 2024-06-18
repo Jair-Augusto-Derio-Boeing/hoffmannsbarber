@@ -1,7 +1,10 @@
 <template>
   <div class="back">
     <section class="about-me"> 
-
+      <div class="effect-lucas">
+        <img class="lucas-shiny" src="../assets/lucas-blank.svg" alt="lucas Hoffmann Shiny">
+        <img class="lucas-backdrop" src="../assets/backdrop-lucas.svg" alt="Lucas Hoffmann">
+      </div>
     </section>
     <Navbar></Navbar>
 
@@ -38,4 +41,8 @@ export default {
     width: 100%;
     background-color: black;
   }
+  .lucas-shiny {
+    filter: drop-shadow(1px 1px 10px white);
+  }
+  
 </style>
