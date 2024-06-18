@@ -13,7 +13,7 @@ export default {
 <style>
 nav {
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     background-color: #D9D9D9;
     position: sticky;
     top: 0px;

@@ -34,7 +34,7 @@ export default {
   }
   .about-me {
     position: relative;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     background-color: black;
   }
