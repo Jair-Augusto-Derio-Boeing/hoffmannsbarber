@@ -9,14 +9,18 @@
             <li><a href="#">Planos</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
-        <img src="../assets/menu-hamburguer.svg" class="menu-hamburguer">
+        <img @click="OpenMenu" src="../assets/menu-hamburguer.svg" class="menu-hamburguer">
     </nav>
 </template>
 
 <script>
 
 export default {
-
+methods: {
+    OpenMenu() {
+            this.$emit('OpenMenu');
+        }
+},
 }
 </script>
 
@@ -35,6 +39,8 @@ nav {
 .menu-hamburguer {
     cursor: pointer;
     display: none;
+    position: relative;
+    right: 5%;
 }
 nav ul{
     display: flex;
@@ -51,9 +57,46 @@ nav ul li a{
     color: black;
 }
 
-.logo {
-    width: 8%;
-    margin-top: 0.5%;
-    margin-left: 1%;
+.logo{
+    position: relative;
+    height: 8%;
+    width: 80%;
+    top: 0.5%;
+    left: 2%;
+}
+
+@media(max-width: 970px){
+    nav .menu-hamburguer{
+        display: block;
+        
+    }
+    nav ul{
+        display: none;
+    }
+    /* nav ul{
+        position: fixed;
+        width: 60%;
+        height: 60%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s ease-in;
+        background-color: #00000052;
+    }
+    nav ul.active{
+        transform: translateX(0);
+
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        color: white;
+    }
+     */
 }
 </style>

@@ -13,7 +13,8 @@
 
     </section>
 
-    <Navbar></Navbar>
+    <Navbar @OpenMenu="OpenMenu"></Navbar>
+    <Menu v-model:ShowMenu="ShowMenu"></Menu>
   </div>
 
 
@@ -22,13 +23,27 @@
 <script>
 
 import Navbar from '@/components/Navbar.vue';
+import Menu from '@/components/Menu.vue'
 
 export default {
+  data() {
+    return {
+      ShowMenu: false,
+    }
+  },
   methods: {
-
+    OpenMenu() {
+      if (this.ShowMenu === true) {
+        this.ShowMenu = false;
+      }
+      else {
+        this.ShowMenu = true;
+      }
+    },
   },
   components: {
     Navbar,
+    Menu,
   },
 }
 </script>
@@ -75,6 +90,7 @@ export default {
   left: -33px;
   width: 19%;
 }
+
 .scissors {
   width: 60px;
 }
