@@ -40,6 +40,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  display: grid;
   flex-direction: column;
 }
 
