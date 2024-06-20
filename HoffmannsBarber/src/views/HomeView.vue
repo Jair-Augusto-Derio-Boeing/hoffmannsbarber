@@ -15,7 +15,7 @@
     <Navbar></Navbar>
   </div>
 
-  
+
 </template>
 
 <script>
@@ -37,8 +37,8 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 400vh;
+  max-width: 1400px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
