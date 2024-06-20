@@ -3,7 +3,7 @@
 
     <section class="about-me">
 
-      <div class="effect"></div>
+      <img src="../Effects.svg" alt="">
 
       <div class="effect-lucas">
         <img class="lucas-backdrop" src="../assets/backdrop-lucas.svg" alt="Lucas Hoffmann">
