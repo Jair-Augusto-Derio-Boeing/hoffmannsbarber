@@ -22,9 +22,7 @@ nav {
 
 .logo {
     width: 8%;
-    top: 8%;
-    left: 1%;
-    position: relative;
-
+    margin-top: 0.5%;
+    margin-left: 1%;
 }
 </style>
