@@ -3,7 +3,8 @@
 
     <section class="about-me">
 
-      <img src="../assets/Effects.png" class="effect" alt="">
+      <img src="../assets/Effects.png" class="effect" alt="Effects">
+
 
       <div class="effect-lucas">
         <img class="lucas-backdrop" src="../assets/backdrop-lucas.svg" alt="Lucas Hoffmann">
@@ -73,5 +74,8 @@ export default {
   top: -33px;
   left: -33px;
   width: 19%;
+}
+.scissors {
+  width: 60px;
 }
 </style>
