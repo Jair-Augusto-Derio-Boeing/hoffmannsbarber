@@ -3,7 +3,7 @@
 
     <section class="about-me">
 
-      <div class="effect"></div>
+      <img src="../assets/Effects.png" class="effect" alt="">
 
       <div class="effect-lucas">
         <img class="lucas-backdrop" src="../assets/backdrop-lucas.svg" alt="Lucas Hoffmann">
@@ -38,9 +38,8 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 400vh;
   display: flex;
-  display: grid;
   flex-direction: column;
 }
 
@@ -54,9 +53,7 @@ export default {
 .effect {
   width: 100%;
   height: 800px;
-  background-color: #D9D9D9;
   position: absolute;
-  top: -50%;
 }
 
 .effect-lucas {
