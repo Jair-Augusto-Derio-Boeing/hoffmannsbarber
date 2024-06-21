@@ -3,7 +3,12 @@
 
     <section class="about-me">
 
+<<<<<<< HEAD
       <img src="../Effects.svg" alt="">
+=======
+      <img src="../assets/Effects.png" class="effect" alt="Effects">
+
+>>>>>>> main
 
       <div class="effect-lucas">
         <img class="lucas-backdrop" src="../assets/backdrop-lucas.svg" alt="Lucas Hoffmann">
@@ -12,7 +17,8 @@
 
     </section>
 
-    <Navbar></Navbar>
+    <Navbar v-model:NoneLogo="NoneLogo" @OpenMenu="OpenMenu"></Navbar>
+    <Menu v-model:ShowMenu="ShowMenu"></Menu>
   </div>
 
 
@@ -21,13 +27,32 @@
 <script>
 
 import Navbar from '@/components/Navbar.vue';
+import Menu from '@/components/Menu.vue'
 
 export default {
+  data() {
+    return {
+      ShowMenu: false,
+      NoneLogo: true,
+    }
+  },
   methods: {
+    OpenMenu() {
+      if (this.ShowMenu === true) {
+        this.ShowMenu = false;
+        this.NoneLogo = true;
 
+      }
+      else {
+        this.ShowMenu = true;
+        this.NoneLogo = false;
+
+      }
+    },
   },
   components: {
     Navbar,
+    Menu,
   },
 }
 </script>
@@ -38,7 +63,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  min-height: 400vh;
   display: flex;
   flex-direction: column;
 }
@@ -53,9 +78,7 @@ export default {
 .effect {
   width: 100%;
   height: 800px;
-  background-color: #D9D9D9;
   position: absolute;
-  top: -50%;
 }
 
 .effect-lucas {
@@ -75,5 +98,9 @@ export default {
   top: -33px;
   left: -33px;
   width: 19%;
+}
+
+.scissors {
+  width: 60px;
 }
 </style>
