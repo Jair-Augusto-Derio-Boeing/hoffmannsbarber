@@ -3,20 +3,20 @@
 
     <section class="about-me">
       <img src="../assets/Effects.png" class="effect" alt="Effects">
-      <div class="effect-lucas">
-        <img src="../assets/barber-scissor.svg" class="scissor" alt="">
-        <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
-        <img class="lucas-backdrop" src="../assets/LucaoPhoto.png" alt="Lucas Hoffmann">
-      </div>
-<<<<<<< HEAD
+      <div class="center">
 
-      <div class="p">
-        <h1><b> QUEM É LUCAS HOFFMANN?</b></h1>
-        <p>Barbeiro a mais de 3 anos, mais de 4 certificados no currículo, um profissional capacitado para te atender!
-          Alem de tudo, professor para barbeiro! Ministro cursos do iniciante ate as técnicas avançadas !</p>
+        <div class="effect-lucas">
+          <img src="../assets/barber-scissor.svg" class="scissor" alt="">
+          <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
+          <img class="lucas-backdrop" src="../assets/LucaoPhoto.png" alt="Lucas Hoffmann">
+        </div>
+
+        <div class="p">
+          <h1><b> QUEM É LUCAS HOFFMANN?</b></h1>
+          <p>Barbeiro a mais de 3 anos, mais de 4 certificados no currículo, um profissional capacitado para te atender!
+            Alem de tudo, professor para barbeiro! Ministro cursos do iniciante ate as técnicas avançadas !</p>
+        </div>
       </div>
-=======
->>>>>>> c2d12a293004961b34e946c312605d63745cc56f
     </section>
     <section>
       <img src="../assets/Effect-invert.png" class="effect2" alt="Effects">
@@ -85,6 +85,7 @@ export default {
   height: 800px;
   position: absolute;
 }
+
 .effect2 {
   width: 100%;
   height: 800px;
@@ -109,6 +110,7 @@ export default {
   left: 5.5%;
   top: 30px;
 }
+
 .scissor2 {
   width: 4%;
   position: relative;
@@ -124,24 +126,35 @@ export default {
   top: 10%;
   text-align: center;
 }
-.p h1{
+
+.p h1 {
   width: 50%;
   font-size: 42px;
   font-weight: 900;
 }
-.p p{
+
+.p p {
   width: 30%;
   left: 9.5%;
   position: relative;
   font-size: 120%;
 }
-@media(max-width: 970px){
-  
-  .about-me{
+
+@media(max-width: 970px) {
+
+  .about-me {
     display: grid;
   }
-  .p p{
-  font-size: 100%;
+  .p{
+    justify-content: center;
+  }
+.p h1{
+  font-size: 180%;
 }
+  .p p {
+    font-size: 100%;
+  }
+
+
 }
 </style>
