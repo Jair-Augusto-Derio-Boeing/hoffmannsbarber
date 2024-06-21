@@ -13,7 +13,7 @@
 
     </section>
 
-    <Navbar @OpenMenu="OpenMenu"></Navbar>
+    <Navbar v-model:NoneLogo="NoneLogo" @OpenMenu="OpenMenu"></Navbar>
     <Menu v-model:ShowMenu="ShowMenu"></Menu>
   </div>
 
@@ -29,15 +29,20 @@ export default {
   data() {
     return {
       ShowMenu: false,
+      NoneLogo: true,
     }
   },
   methods: {
     OpenMenu() {
       if (this.ShowMenu === true) {
         this.ShowMenu = false;
+        this.NoneLogo = true;
+
       }
       else {
         this.ShowMenu = true;
+        this.NoneLogo = false;
+
       }
     },
   },
