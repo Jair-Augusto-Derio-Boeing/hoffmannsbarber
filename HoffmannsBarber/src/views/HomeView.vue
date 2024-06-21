@@ -11,6 +11,11 @@
         <img class="lucas-shiny" src="../assets/lucas-blank.svg" alt="lucas Hoffmann Shiny">
       </div>
 
+      <div class="p">
+        <h1><b> QUEM É LUCAS HOFFMANN?</b></h1>
+        <p>Barbeiro a mais de 3 anos, mais de 4 certificados no currículo, um profissional capacitado para te atender!
+          Alem de tudo, professor para barbeiro! Ministro cursos do iniciante ate as técnicas avançadas !</p>
+      </div>
     </section>
 
     <Navbar v-model:NoneLogo="NoneLogo" @OpenMenu="OpenMenu"></Navbar>
@@ -69,6 +74,7 @@ export default {
   height: 88vh;
   width: 100%;
   background-color: white;
+
 }
 
 .effect {
@@ -98,5 +104,33 @@ export default {
 
 .scissors {
   width: 60px;
+}
+
+.p {
+  position: relative;
+  color: #3E3E3E;
+  left: 35%;
+  top: 10%;
+  text-align: center;
+}
+.p h1{
+  width: 50%;
+  font-size: 42px;
+  font-weight: 900;
+}
+.p p{
+  width: 30%;
+  left: 9.5%;
+  position: relative;
+  font-size: 120%;
+}
+@media(max-width: 970px){
+  
+  .about-me{
+    display: grid;
+  }
+  .p p{
+  font-size: 100%;
+}
 }
 </style>
