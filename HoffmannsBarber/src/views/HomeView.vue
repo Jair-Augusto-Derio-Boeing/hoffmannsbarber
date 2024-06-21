@@ -3,6 +3,8 @@
 
     <section class="about-me">
       <img src="../assets/Effects.png" class="effect" alt="Effects">
+      <img src="../assets/barber-pole.svg" class="barber-pole" alt="">
+      <img src="../assets/barber-pole.svg" class="barber-pole2" alt="">
       <div class="effect-lucas">
         <img src="../assets/barber-scissor.svg" class="scissor" alt="">
         <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
@@ -83,27 +85,39 @@ export default {
 
 .effect-lucas {
   position: relative;
-  left: 4%;
+  left: 9%;
   top: 15%;
+  width: 15%;
+  height: 50%;
 }
 
 .lucas-backdrop {
   position: relative;
-  width: 15%;
+  width: 100%;
   border-radius: 20px;
 }
 
 .scissor {
-  width: 4%;
-  position: relative;
-  left: 5.5%;
-  top: 30px;
+  width: 20%;
+  position: absolute;
+  top: 94%;
+  left: -10%;
 }
 .scissor2 {
-  width: 4%;
-  position: relative;
-  top: 30px;
-  left: 17%;
+  width: 20%;
+  position: absolute;
+  top: -6%;
+  left: 90%;
   rotate: 180deg;
+}
+.barber-pole {
+  position: absolute;
+  left: -1%;
+  transform: scaleX(-1);
+}
+.barber-pole2 {
+  position: absolute;
+  right: 0%;
+  margin-right: 0;
 }
 </style>
