@@ -2,22 +2,25 @@
   <div class="back">
 
     <section class="about-me">
-
       <img src="../assets/Effects.png" class="effect" alt="Effects">
-
-
       <div class="effect-lucas">
-        <img class="lucas-backdrop" src="../assets/backdrop-lucas.svg" alt="Lucas Hoffmann">
-        <img class="lucas-shiny" src="../assets/lucas-blank.svg" alt="lucas Hoffmann Shiny">
+        <img src="../assets/barber-scissor.svg" class="scissor" alt="">
+        <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
+        <img class="lucas-backdrop" src="../assets/LucaoPhoto.png" alt="Lucas Hoffmann">
       </div>
+<<<<<<< HEAD
 
       <div class="p">
         <h1><b> QUEM É LUCAS HOFFMANN?</b></h1>
         <p>Barbeiro a mais de 3 anos, mais de 4 certificados no currículo, um profissional capacitado para te atender!
           Alem de tudo, professor para barbeiro! Ministro cursos do iniciante ate as técnicas avançadas !</p>
       </div>
+=======
+>>>>>>> c2d12a293004961b34e946c312605d63745cc56f
     </section>
-
+    <section>
+      <img src="../assets/Effect-invert.png" class="effect2" alt="Effects">
+    </section>
     <Navbar v-model:NoneLogo="NoneLogo" @OpenMenu="OpenMenu"></Navbar>
     <Menu v-model:ShowMenu="ShowMenu"></Menu>
   </div>
@@ -82,28 +85,36 @@ export default {
   height: 800px;
   position: absolute;
 }
+.effect2 {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+}
 
 .effect-lucas {
   position: relative;
-  margin-top: 5%;
-  margin-left: 10%;
+  left: 4%;
+  top: 15%;
 }
 
 .lucas-backdrop {
-  position: absolute;
+  position: relative;
   width: 15%;
+  border-radius: 20px;
 }
 
-.lucas-shiny {
-  position: absolute;
-  filter: drop-shadow(1px 1px 10px white);
-  top: -33px;
-  left: -33px;
-  width: 19%;
+.scissor {
+  width: 4%;
+  position: relative;
+  left: 5.5%;
+  top: 30px;
 }
-
-.scissors {
-  width: 60px;
+.scissor2 {
+  width: 4%;
+  position: relative;
+  top: 30px;
+  left: 17%;
+  rotate: 180deg;
 }
 
 .p {
