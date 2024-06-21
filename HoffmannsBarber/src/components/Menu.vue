@@ -19,6 +19,7 @@ export default {
             type: Boolean,
             required: true
         },
+        
     },
 }
 </script>
@@ -47,7 +48,7 @@ export default {
     gap: 50px;
     position: relative;
     left: -10%;
-    top: 30%;
+    top: 20%;
 }
 
 

@@ -1,7 +1,7 @@
 <template>
     <nav>
         <a href="home">
-            <img class="logo" src="../assets/logo-blank.svg" >
+            <img class="logo" src="../assets/logo-blank.svg" v-if="NoneLogo">
         </a>
         <ul>
             <li><a href="#">Home</a></li>
@@ -16,11 +16,18 @@
 <script>
 
 export default {
+    props: {
+        NoneLogo: {
+            type: Boolean,
+            required: true
+        },
+    },
 methods: {
-    OpenMenu() {
+        OpenMenu() {
             this.$emit('OpenMenu');
+
         }
-},
+    },
 }
 </script>
 
@@ -42,37 +49,42 @@ nav {
     position: relative;
     right: 5%;
 }
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none;
     align-items: center;
 }
-nav ul li{
+
+nav ul li {
     padding: 0 40px 0 20px;
-    
+
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     font-size: 18px;
     color: black;
 }
 
-.logo{
+.logo {
     position: relative;
     height: 8%;
     width: 80%;
     top: 0.5%;
-    left: 2%;
+    left: 3%;
 }
 
-@media(max-width: 970px){
-    nav .menu-hamburguer{
+@media(max-width: 970px) {
+    nav .menu-hamburguer {
         display: block;
-        
+
     }
-    nav ul{
+
+    nav ul {
         display: none;
     }
+
     /* nav ul{
         position: fixed;
         width: 60%;
