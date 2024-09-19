@@ -8,7 +8,7 @@
       <img src="../assets/barber-pole.svg" class="barber-pole2" alt="">
       <div class="center">
 
-        <div class="grid"> 
+        <div style="display: grid;">
           <div class="effect-lucas">
             <img src="../assets/barber-scissor.svg" class="scissor" alt="">
             <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
@@ -16,8 +16,10 @@
           </div>
           <div class="p">
             <h1>QUEM É LUCAS HOFFMANN?</h1>
-              <p>Lucas Hoffman, Barbeiro a mais de 3 anos, possui mais de 4 certificados no currículo, um profissional capacitado para te atender!
-              Além de tudo isso, Lucas ministra seu próprio curso de barbeiro, indo do iniciante até técnicas avançadas!</p>
+            <p>Lucas Hoffman, Barbeiro a mais de 3 anos, possui mais de 4 certificados no currículo, um profissional
+              capacitado para te atender!
+              Além de tudo isso, Lucas ministra seu próprio curso de barbeiro, indo do iniciante até técnicas avançadas!
+            </p>
           </div>
         </div>
 
@@ -27,7 +29,7 @@
       <img src="../assets/Effect-invert.png" class="effect2" alt="Effects">
     </section>
     <Navbar v-model:NoneLogo="NoneLogo" @OpenMenu="OpenMenu"></Navbar>
-    <Menu v-model:ShowMenu="ShowMenu"></Menu>
+    <Menu v-model:showMenu="showMenu"></Menu>
   </div>
 
 
@@ -41,21 +43,16 @@ import Menu from '@/components/Menu.vue'
 export default {
   data() {
     return {
-      ShowMenu: false,
-      NoneLogo: true,
+      showMenu: false,
     }
   },
   methods: {
     OpenMenu() {
-      if (this.ShowMenu === true) {
-        this.ShowMenu = false;
-        this.NoneLogo = true;
-
+      if (this.showMenu === true) {
+        this.showMenu = false;
       }
       else {
-        this.ShowMenu = true;
-        this.NoneLogo = false;
-
+        this.showMenu = true;
       }
     },
   },
@@ -67,10 +64,11 @@ export default {
 </script>
 
 <style>
-html{
+html {
   overflow-x: hidden;
 
 }
+
 .back {
   position: absolute;
   top: 0;
@@ -80,6 +78,7 @@ html{
   display: flex;
   flex-direction: column;
 }
+
 .about-me {
   position: relative;
   height: 88vh;
@@ -139,7 +138,7 @@ html{
   position: absolute;
   right: -1%;
   margin-right: 0;
-  bottom: 0 ;
+  bottom: 0;
 }
 
 .p {
@@ -160,27 +159,30 @@ html{
   font-size: 42px;
   font-weight: 900;
 }
-.grid{
-  display: flex; 
+
+.grid {
+  display: flex;
   align-items: center;
-  gap:10%;
-  margin-top: 150px; 
+  gap: 10%;
+  margin-top: 150px;
   width: 100vw
 }
-@media(max-width: 970px) {
-.grid{
-  display: grid;
-  z-index: 10;
-  justify-items: center;
-}
-.effect-lucas {
-  width:250px;
-  height: 300px;
-}
 
-.center{
-  display: grid;
-  align-items: center;
-}
+@media(max-width: 970px) {
+  .grid {
+    display: grid;
+    z-index: 10;
+    justify-items: center;
+  }
+
+  .effect-lucas {
+    width: 250px;
+    height: 300px;
+  }
+
+  .center {
+    display: grid;
+    align-items: center;
+  }
 }
 </style>
