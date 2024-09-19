@@ -1,114 +1,89 @@
 <template>
-    <nav>
-        <a href="home">
-            <img class="logo" src="../assets/logo-blank.svg" v-if="NoneLogo">
-        </a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Catálogo</a></li>
-            <li><a href="#">Planos</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-        <img @click="OpenMenu" src="../assets/menu-hamburguer.svg" class="menu-hamburguer">
-    </nav>
+  <nav>
+      <img class="logo" src="../assets/logo-blank.svg">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Catálogo</a></li>
+      <li><a href="#">Planos</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <img @click="OpenMenu" src="../assets/menu-hamburguer.svg" class="menu-hamburguer">
+  </nav>
 </template>
 
 <script>
 
 export default {
-    props: {
-        NoneLogo: {
-            type: Boolean,
-            required: true
-        },
-    },
-methods: {
-        OpenMenu() {
-            this.$emit('OpenMenu');
+  props: {
+  },
+  methods: {
+    OpenMenu() {
+      this.$emit('OpenMenu');
 
-        }
-    },
+    }
+  },
 }
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav {
-    width: 100%;
-    height: 12vh;
-    background-color: #D9D9D9;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 12vh;
+  background-color: #D9D9D9;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  z-index: 1000;
 }
 
 .menu-hamburguer {
-    cursor: pointer;
-    display: none;
-    position: relative;
-    right: 5%;
+  cursor: pointer;
+  display: none;
+  position: relative;
+  right: 5%;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
 nav ul li {
-    padding: 0 40px 0 20px;
+  padding: 0 40px 0 20px;
 
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
 }
 
 .logo {
-    position: relative;
-    height: 8%;
-    width: 80%;
-    top: 0.5%;
-    left: 3%;
+  cursor: pointer;
+  position: relative;
+  width: 10%;
+  top: 0.5%;
+  left: 3%;
 }
 
 @media(max-width: 970px) {
-    nav .menu-hamburguer {
-        display: block;
+  nav .menu-hamburguer {
+    display: block;
+  }
 
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    /* nav ul{
-        position: fixed;
-        width: 60%;
-        height: 60%;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        transition: 0.3s ease-in;
-        background-color: #00000052;
-    }
-    nav ul.active{
-        transform: translateX(0);
-
-    }
-    nav ul li{
-        padding: 10px;
-    }
-    nav ul li a{
-        font-size: 18px;
-        color: white;
-    }
-     */
+  nav ul {
+    display: none;
+  }
 }
 </style>
