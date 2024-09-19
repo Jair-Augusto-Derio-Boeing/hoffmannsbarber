@@ -32,15 +32,22 @@ methods: {
 </script>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 nav {
     width: 100%;
     height: 12vh;
     background-color: #D9D9D9;
     position: sticky;
-    top: 0px;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid #000;
+    z-index: 1000;
 }
 
 .menu-hamburguer {
@@ -78,13 +85,10 @@ nav ul li a {
 @media(max-width: 970px) {
     nav .menu-hamburguer {
         display: block;
-
     }
-
     nav ul {
         display: none;
     }
-
     /* nav ul{
         position: fixed;
         width: 60%;
@@ -108,7 +112,7 @@ nav ul li a {
     nav ul li a{
         font-size: 18px;
         color: white;
-    }
-     */
+    } */
+    
 }
 </style>
