@@ -59,7 +59,11 @@ nav ul {
 
 nav ul li {
   padding: 0 40px 0 20px;
-
+  transition: transform 0.3s ease-in-out ;
+}
+nav ul li:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(10px 7px 8px rgba(0, 0, 0, 0.5)); 
 }
 
 nav ul li a {

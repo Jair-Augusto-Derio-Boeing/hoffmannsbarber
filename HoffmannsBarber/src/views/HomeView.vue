@@ -106,11 +106,15 @@ html {
   left: 30%;
   width: 400px;
   bottom: 5%;
+  transition: transform 0.5s ease-in-out ;
 }
-
+.effect-lucas:hover {
+  transform: scale(1.1);
+}
 .lucas-backdrop {
   width: 100%;
   border-radius: 40px;
+  filter: drop-shadow(10px 7px 8px rgba(0, 0, 0, 0.3)); 
   z-index: 2;
 }
 
@@ -118,6 +122,9 @@ html {
   width: 20%;
   position: relative;
   transform: translateY(-50px);
+  filter: drop-shadow(0 7px 6px rgba(0, 0, 0, 0.3)); 
+  border: none;
+  display: block;
   right: 10%;
 }
 
@@ -125,6 +132,7 @@ html {
   width: 20%;
   position: relative;
   transform: translateY(-48px);
+  filter: drop-shadow(0 -7px 6px rgba(0, 0, 0, 0.3)); 
   align-self: flex-end;
   margin-right: -38px;
   rotate: 180deg;
