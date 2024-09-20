@@ -32,6 +32,7 @@ export default {
   box-sizing: border-box;
 }
 nav {
+  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.2); 
   width: 100%;
   height: 12vh;
   background-color: #D9D9D9;
@@ -40,7 +41,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #000;
   z-index: 1000;
 }
 

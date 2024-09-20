@@ -1,28 +1,28 @@
 <template>
   <div class="back">
-
     <section class="about-me">
       <img src="../assets/Effects.png" class="effect" alt="Effects">
 
       <img src="../assets/barber-pole.svg" class="barber-pole" alt="">
       <img src="../assets/barber-pole.svg" class="barber-pole2" alt="">
-      <div class="center">
 
-        <div style="display: grid;">
-          <div class="effect-lucas">
-            <img src="../assets/barber-scissor.svg" class="scissor" alt="">
-            <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
-            <img class="lucas-backdrop" src="../assets/LucaoPhoto.png" alt="Lucas Hoffmann">
+      <div class="center" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+          <div class="left-flank">
+            <div class="effect-lucas">
+              <img src="../assets/barber-scissor.svg" class="scissor2" alt="">
+              <img class="lucas-backdrop" src="../assets/LucaoPhoto.png" alt="Lucas Hoffmann">
+              <img src="../assets/barber-scissor.svg" class="scissor" alt="">
+            </div>
           </div>
-          <div class="p">
-            <h1>QUEM É LUCAS HOFFMANN?</h1>
-            <p>Lucas Hoffman, Barbeiro a mais de 3 anos, possui mais de 4 certificados no currículo, um profissional
-              capacitado para te atender!
-              Além de tudo isso, Lucas ministra seu próprio curso de barbeiro, indo do iniciante até técnicas avançadas!
-            </p>
+          <div class="right-flank">
+            <div class="p">
+              <h1>QUEM É LUCAS HOFFMANN?</h1>
+              <p>Lucas Hoffman, Barbeiro a mais de 3 anos, possui mais de 4 certificados no currículo, um profissional
+                capacitado para te atender!
+                Além de tudo isso, Lucas ministra seu próprio curso de barbeiro, indo do iniciante até técnicas avançadas!
+              </p>
+            </div>
           </div>
-        </div>
-
       </div>
     </section>
     <section>
@@ -66,7 +66,6 @@ export default {
 <style>
 html {
   overflow-x: hidden;
-
 }
 
 .back {
@@ -81,6 +80,7 @@ html {
 
 .about-me {
   position: relative;
+  display: flex;
   height: 88vh;
   width: 100%;
   background-color: white;
@@ -101,30 +101,32 @@ html {
 
 .effect-lucas {
   position: relative;
-  left: 9%;
+  display: flex;
+  flex-direction: column;
+  left: 30%;
   width: 400px;
-  height: 450px;
-  bottom: 100px;
+  bottom: 5%;
 }
 
 .lucas-backdrop {
   width: 100%;
-  border-radius: 20px;
-
+  border-radius: 40px;
+  z-index: 2;
 }
 
 .scissor {
   width: 20%;
   position: relative;
-  top: 450px;
-  left: -35px;
+  transform: translateY(-50px);
+  right: 10%;
 }
 
 .scissor2 {
   width: 20%;
   position: relative;
-  top: 35px;
-  left: 200px;
+  transform: translateY(-48px);
+  align-self: flex-end;
+  margin-right: -38px;
   rotate: 180deg;
 }
 
@@ -140,7 +142,17 @@ html {
   margin-right: 0;
   bottom: 0;
 }
-
+.left-flank {
+  display: flex;
+  width: 50vh;
+  height: 100%;
+  align-items: flex-end;
+}
+.right-flank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .p {
   display: grid;
   position: relative;
@@ -153,6 +165,7 @@ html {
 
 .p p {
   width: 50%;
+  text-align: center;
 }
 
 .p h1 {
@@ -168,7 +181,8 @@ html {
   width: 100vw
 }
 
-@media(max-width: 970px) {
+
+@media(max-width: 768px) {
   .grid {
     display: grid;
     z-index: 10;
