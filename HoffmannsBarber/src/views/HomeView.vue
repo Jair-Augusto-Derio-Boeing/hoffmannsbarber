@@ -144,8 +144,8 @@ html {
 }
 .left-flank {
   display: flex;
-  width: 50vh;
   height: 100%;
+  margin-left: 10%;
   align-items: flex-end;
 }
 .right-flank {
